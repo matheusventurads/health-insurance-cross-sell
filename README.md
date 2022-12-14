@@ -23,6 +23,7 @@ Para realizar a predição estão disponíveis dados demográficos, dos veículo
 
 # 2. Premissas de negócio
 * O objetivo é elencar os clientes com maior propensão de contratar o seguro.
+* Serão realizados 20 mil contatos com os clientes para oferta do seguro.
 
 # 3. Planejamento da solução
 O planejamento foi dividido em três etapas:
@@ -76,7 +77,43 @@ Implementação da API para previsão da propensão de cada cliente em planilha 
 * Métricas de Performance (Precision at k, Recall at k)
 
 # 4. Destaque dos Insights de negócio
+Na exploração de dados, foram levantadas diferentes hipóteses para melhor entendimento do comportamento de cada atributo. Dentre as hipóteses, os seguintes insights foram destacados.
+
 # 5. Modelos de Machine Learning
+Foram treinados 6 modelos de machine learning para previsão das vendas, com cross-validation:
+* Modelo Aleatório (Baseline para análise de performance)
+* KNN (k nearest neighbors)
+* Regressão Logística
+* Random Forest Classifier
+* XGBoost Classifier
+* LightGBM Classifier
+* CatBoost Classifier
+
+Abaixo estão as performances de cada modelo em ordem crescente:
+
+|Modelo|Precision at k|Recall at k|
+|------|--------------|-----------|
+|LightGBM Classifier|0,3026+/-0,0021|0,8638+/-0,0059|
+|CatBoost Classifier|0,3014+/-0,0022|0,8605+/-0,0063|
+|XGBoost Classifier	|0,3012+/-0,0022|0,8597+/-0,0064|
+|Random Forest Classifier|0,2869+/-0,0026|0,8189+/-0,0074|
+|KNeighbors Classifier|0,2794+/-0,0019|0,7975+/-0,0056|
+|LogisticRegression|0.275+/-0,002|0,785+/-0,0057|
+
+O modelo escolhido foi LightGBM, que além de apresentar os melhores valores para as métricas analisadas, também tem alta velocidade de treinamento, facilitando o estudo dos hiperparâmetros para otimização.
+
+Após otimização pelo método de Random Search, o modelo foi treinado com os novos valores de hiperparâmetros e os seguintes resultados foram obtidos na previsão de propensão nos dados de teste.
+
+|Modelo|Precision at k|Recall at k|
+|------|--------------|-----------|
+|LightGBM Classifier|0,3536|0,6056|
+
+## Entendendo as métricas
+* Precision at k: dentre _k_ classificações de classe Positivo que o modelo fez, quantas estão corretas, ou seja, quantas realmente eram positivas.
+* Recall at k: porcentagem de classificações de classe Positivo em _k_ previsões que o modelo fez, em relação ao total de classificações positivas.
+
+Como restrição de negócio, k é igual a 20.000. A primeira vista, o valor de _Precision at k_ aparenta ser baixo, pois do total de predições feitas apenas 35,36% realmente são positivas. Porém o objetivo é elencar os clientes com maior propensão, que pode ser melhor analisado pela _Recall at k_, que aponta que com 20 mil contatos realizados, 60,56% de todos os clientes com resposta positivas foram alcançados.
+
 # 6. Resultado de negócio
 # 7. Deploy do modelo
 # 8. Conclusão
