@@ -22,12 +22,59 @@ Para realizar a predição estão disponíveis dados demográficos, dos veículo
 |Response|0: Cliente não está interessado, 1: Cliente está interessado
 
 # 2. Premissas de negócio
-* O objetivo é elencar os clientes com maior propensão de contrator o seguro
+* O objetivo é elencar os clientes com maior propensão de contratar o seguro.
 
 # 3. Planejamento da solução
+O planejamento foi dividido em três etapas:
+
 ## 3.1. Produto Final
+O resultado entregue será uma planilha no Google Sheets que apresenta a propensão de cada cliente de interesse no seguro, ranqueando-os em relação a propensão.
+
 ## 3.2. Processo
+### _Entendendo o problema de negócio_
+Entender a motivação para a previsão e assim planejar a solução mais efetiva.
+
+### _Coleta de dados_
+Coleta dos dados dos clientes e respostas na plataforma [Kaggle](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction).
+
+### _Limpeza dos dados_
+Colunas renomeadas.
+
+### _Análise Exploratória de Dados (EDA)_
+Exploração dos dados para entendimento de negócio e descoberta de insights para auxílio na determinação de features no treinamento do modelo de machine learning.
+
+### _Feature Enginnering_
+Transformação de features para facilitar a análise e preparação para os modelos de machine learning.
+
+### _Preparação dos dados
+Aplicação de técnicas de normalização, rescaling e encoding dos dados.
+
+### _Feature Selection_
+Seleção das features relevantes que serão utilizadas para treinamento do modelo através do algoritmo ExtraTree.
+
+### _Machine Learning Modeling_
+Treinamento de algoritmos de Classificação com cross-validation estratificada. O modelo selecionado foi aperfeiçoado com Hyperparameter fine tuning.
+
+### _Avaliação do Modelo_
+Avaliação do modelo treinado utilizando das seguintes técnicas: _Precision at k_ e _Recall at k_.
+
+### _Resultados Financeiros_
+Tradução do resultado para valores de negócio.
+
+### _Deploy do Modelo (Google Sheets)_
+Implementação da API para previsão da propensão de cada cliente em planilha online do Google Sheets.
+
 ## 3.3. Ferramentas
+
+* Python 3.8
+* Pandas, Seaborn, Matplotlib e Sklearn
+* Flask e Python API's
+* Git e Heroku
+* Boruta
+* Algoritmos de Classificação (k-Nearest Neighbors, Regressão Logística, Random Forest, XGBoost, LightGBM e CatBoost)
+* Cross-Validation, Hyperparameter Optimization
+* Métricas de Performance (Precision at k, Recall at k)
+
 # 4. Destaque dos Insights de negócio
 # 5. Modelos de Machine Learning
 # 6. Resultado de negócio
