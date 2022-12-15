@@ -47,7 +47,7 @@ Exploração dos dados para entendimento de negócio e descoberta de insights pa
 ### _Feature Enginnering_
 Transformação de features para facilitar a análise e preparação para os modelos de machine learning.
 
-### _Preparação dos dados
+### _Preparação dos dados_
 Aplicação de técnicas de normalização, rescaling e encoding dos dados.
 
 ### _Feature Selection_
@@ -130,7 +130,7 @@ Para determinar os resultados financeiros, as seguintes premissas foram definida
 |Modelo Aleatório|2.451|₹77,627,439.16|
 |Diferença|4.620|₹146.304.978,24|
 
-Assim, o resultado financeiro esperado com o modelo de Machine Learning é 288% maior do que o que seria alcançado com o modelo aleatório. Como visto na Curva Lift.
+Assim, o resultado financeiro esperado com o modelo de Machine Learning é 288% maior do que o que seria alcançado com o modelo aleatório, como visto na Curva Lift.
 
 # 7. Deploy do modelo
 # 8. Conclusão
