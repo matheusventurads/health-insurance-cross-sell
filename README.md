@@ -1,6 +1,6 @@
 # Insurance Cross Sell Prediciton
 # Conhecendo o negócio
- A Soter Seguros, é uma seguradora fictícia, empresa que atua no mercado financeiro com foco na emição de apólices de seguros de saúde. Uma apólice de seguro é um acordo pelo qual uma empresa se compromete a fornecer uma garantia de compensação por perda, dano, doença ou morte especificados em troca do pagamento de um prêmio especificado. Um prêmio é uma quantia em dinheiro que o cliente precisa pagar regularmente a uma companhia de seguros por essa garantia.
+ A Soter Insurance, é uma seguradora indiana fictícia, empresa que atua no mercado financeiro com foco na emição de apólices de seguros de saúde. Uma apólice de seguro é um acordo pelo qual uma empresa se compromete a fornecer uma garantia de compensação por perda, dano, doença ou morte especificados em troca do pagamento de um prêmio especificado. Um prêmio é uma quantia em dinheiro que o cliente precisa pagar regularmente a uma companhia de seguros por essa garantia.
 
 # 1. Questão de negócio
 A empresa planeja realizar 20 mil divulgações do novo seguro aos atuais clientes, e com o intuito de priorizar os interessados e maximizar os lucros é necessário prever se os clientes que contrataram um seguro de saúde do último ano também estão interessados em seguros de veículos fornecidos pela empresa. 
@@ -93,12 +93,12 @@ Abaixo estão as performances de cada modelo em ordem crescente:
 
 |Modelo|Precision at k|Recall at k|
 |------|--------------|-----------|
-|LightGBM Classifier|0,3026+/-0,0021|0,8638+/-0,0059|
-|CatBoost Classifier|0,3014+/-0,0022|0,8605+/-0,0063|
-|XGBoost Classifier	|0,3012+/-0,0022|0,8597+/-0,0064|
-|Random Forest Classifier|0,2869+/-0,0026|0,8189+/-0,0074|
-|KNeighbors Classifier|0,2794+/-0,0019|0,7975+/-0,0056|
-|LogisticRegression|0.275+/-0,002|0,785+/-0,0057|
+|LightGBM Classifier|0,3026 +/ -0,0021|0,863 +/- 0,0059|
+|CatBoost Classifier|0,3014 +/- 0,0022|0,8605 +/- 0,0063|
+|XGBoost Classifier	|0,3012 +/- 0,0022|0,8597 +/- 0,0064|
+|Random Forest Classifier|0,286 9+/- 0,0026|0,8189 +/- 0,0074|
+|KNeighbors Classifier|0,2794 +/- 0,0019|0,7975 +/- 0,0056|
+|LogisticRegression|0.275 +/- 0,002|0,785 +/- 0,0057|
 
 O modelo escolhido foi LightGBM, que além de apresentar os melhores valores para as métricas analisadas, também tem alta velocidade de treinamento, facilitando o estudo dos hiperparâmetros para otimização.
 
@@ -112,9 +112,26 @@ Após otimização pelo método de Random Search, o modelo foi treinado com os n
 * Precision at k: dentre _k_ classificações de classe Positivo que o modelo fez, quantas estão corretas, ou seja, quantas realmente eram positivas.
 * Recall at k: porcentagem de classificações de classe Positivo em _k_ previsões que o modelo fez, em relação ao total de classificações positivas.
 
-Como restrição de negócio, k é igual a 20.000. A primeira vista, o valor de _Precision at k_ aparenta ser baixo, pois do total de predições feitas apenas 35,36% realmente são positivas. Porém o objetivo é elencar os clientes com maior propensão, que pode ser melhor analisado pela _Recall at k_, que aponta que com 20 mil contatos realizados, 60,56% de todos os clientes com resposta positivas foram alcançados.
+### Gráficos
+* Cumulative Gain Curve: curva que indica a porcentagem da classe positiva em relação a porcentagem dos dados, com base na propensão prevista.
+* Curva Lift: indica quantas vezes o modelo de machine learning treinado é melhor do que o modelo aleatório.
+
+Como restrição de negócio, k é igual a 20.000. A primeira vista, o valor de _Precision at k_ aparenta ser baixo, pois do total de predições feitas apenas _35,36%_ realmente são positivas. Porém o objetivo é elencar os clientes com maior propensão, que pode ser melhor analisado pela _Recall at k_, que aponta que com 20 mil contatos realizados, _60,56%_ de todos os clientes com resposta positivas foram alcançados.
 
 # 6. Resultado de negócio
+Para determinar os resultados financeiros, as seguintes premissas foram definidas:
+* O número de clientes na base de dados será 95.278, onde 11678 clientes estão interessados no seguro.
+* Com base nos dados de treino, é esperado que 12,26% dos clientes estejam interessados (Modelo Aleatório).
+* O valor do prêmio anul é de ₹31.669 (rúpias), mediana dos valores na base de dados.
+
+|Modelo|Clientes interessados alcançados|Receita Anual|
+|------|--------------------------------|-------------|
+|LightBGM|7.071|₹223,932,417.40|
+|Modelo Aleatório|2.451|₹77,627,439.16|
+|Diferença|4.620|₹146.304.978,24|
+
+Assim, o resultado financeiro esperado com o modelo de Machine Learning é 288% maior do que o que seria alcançado com o modelo aleatório. Como visto na Curva Lift.
+
 # 7. Deploy do modelo
 # 8. Conclusão
 # 9. Próximos passos
