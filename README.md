@@ -141,5 +141,13 @@ Para facilitar o acesso a lista ranqueada e agilizar o trabalho do time de venda
 
 ![Prediction Button](img/Prediction_button.PNG)
 
+_O modelo que realiza as predições foi hospedado na Cloud Render._
+
 # 8. Conclusão
+O objetivo de priorizar os clientes com maior propensão que devem ser contatados, foi alcançado. Permitindo maior retorno de clientes interessados assim como otimizando o trabalho do time de vendas.
+Além disso, foram gerados X Insights interessantes que podem ser utilizados pelo time de negócio.
+
 # 9. Próximos passos
+* Análisar a possibilidade de criação de features para melhorar o modelo.
+* Aplicar outros modelos de classificação que possam capturar melhor o fenômeno.
+* Aplicar a calibração do 
