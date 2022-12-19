@@ -139,7 +139,7 @@ Assim, o resultado financeiro esperado com o modelo de Machine Learning é 288% 
 # 7. Deploy do modelo
 Para facilitar o acesso a lista ranqueada e agilizar o trabalho do time de vendas no contato com os clientes, foi desenvolvida uma planilha no Google Sheets. Com os dados de cada cliente inseridos, a predição de propensão pode ser determinada pelo botão Propensity Prediction na barra de menu, e em seguida clicando em Get Prediction. Os clientes serão automaticamente ranqueados pelo seu score.
 
-[](img/Prediction_button.PNG)
+![Prediction Button](img/Prediction_button.PNG)
 
 # 8. Conclusão
 # 9. Próximos passos
