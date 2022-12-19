@@ -1,9 +1,13 @@
 # Insurance Cross Sell Prediciton
 # Conhecendo o negócio
  A Soter Insurance, é uma seguradora indiana fictícia, empresa que atua no mercado financeiro com foco na emição de apólices de seguros de saúde. Uma apólice de seguro é um acordo pelo qual uma empresa se compromete a fornecer uma garantia de compensação por perda, dano, doença ou morte especificados em troca do pagamento de um prêmio especificado. Um prêmio é uma quantia em dinheiro que o cliente precisa pagar regularmente a uma companhia de seguros por essa garantia.
+ 
+O time de produtos está analisando a possibilidade de oferecer aos assegurados um novo produto: seguro de automóveis. Assim foi realizada uma pesquisa sobre o interesse em aderir ao novo produto. Os dados dos atributos e suas respostas foram salvos em um baco de dados.
+
+Cerca de 100 mil clientes que não responderam a pesquisa foram selecionais para participar de uma campanha, na qual receberão a oferta do novo produto de seguro de veículos feita pelo time de vendas. No entanto, o time de vendas tem capacidade de realizar apenas 20 mil ligações dentro do período de campanha.
 
 # 1. Questão de negócio
-A empresa planeja realizar 20 mil divulgações do novo seguro aos atuais clientes, e com o intuito de priorizar os interessados e maximizar os lucros é necessário prever se os clientes que contrataram um seguro de saúde do último ano também estão interessados em seguros de veículos fornecidos pela empresa. 
+Considerando o limite de ligações possíveis e com o intuito de priorizar os interessados e maximizar os lucros é necessário prever se os clientes que contrataram um seguro de saúde do último ano também estão interessados em seguros de automóveis fornecidos pela empresa. 
 
 ## 1.1. Entendendo os dados
 Para realizar a predição estão disponíveis dados demográficos, dos veículos e apólices de clientes com suas repostas.
@@ -133,5 +137,9 @@ Para determinar os resultados financeiros, as seguintes premissas foram definida
 Assim, o resultado financeiro esperado com o modelo de Machine Learning é 288% maior do que o que seria alcançado com o modelo aleatório, como visto na Curva Lift.
 
 # 7. Deploy do modelo
+Para facilitar o acesso a lista ranqueada e agilizar o trabalho do time de vendas no contato com os clientes, foi desenvolvida uma planilha no Google Sheets. Com os dados de cada cliente inseridos, a predição de propensão pode ser determinada pelo botão Propensity Prediction na barra de menu, e em seguida clicando em Get Prediction. Os clientes serão automaticamente ranqueados pelo seu score.
+
+[Botão para predição](img/Prediction_button.PNG)
+
 # 8. Conclusão
 # 9. Próximos passos
