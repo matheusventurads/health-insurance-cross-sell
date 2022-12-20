@@ -1,4 +1,7 @@
 # Insurance Cross Sell Prediciton
+![Insurance](img/insurance.png)
+Photo by [Vlad Deep](https://unsplash.com/@vladdeep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/car-insurance?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
+  
 # Conhecendo o negócio
  A Soter Insurance, é uma seguradora indiana fictícia, empresa que atua no mercado financeiro com foco na emição de apólices de seguros de saúde. Uma apólice de seguro é um acordo pelo qual uma empresa se compromete a fornecer uma garantia de compensação por perda, dano, doença ou morte especificados em troca do pagamento de um prêmio especificado. Um prêmio é uma quantia em dinheiro que o cliente precisa pagar regularmente a uma companhia de seguros por essa garantia.
  
