@@ -150,4 +150,5 @@ Além disso, foram gerados X Insights interessantes que podem ser utilizados pel
 # 9. Próximos passos
 * Análisar a possibilidade de criação de features para melhorar o modelo.
 * Aplicar outros modelos de classificação que possam capturar melhor o fenômeno.
-* Aplicar a calibração do 
+* Aplicar a calibração do Modelo de Classificação para aumentar sua confiabilidade.
+* Otimizar o modelo utilizando o framework [Optuna](https://optuna.org/)
