@@ -83,6 +83,16 @@ Implementação da API para previsão da propensão de cada cliente em planilha 
 # 4. Destaque dos Insights de negócio
 Na exploração de dados, foram levantadas diferentes hipóteses para melhor entendimento do comportamento de cada atributo. Dentre as hipóteses, os seguintes insights foram destacados.
 
+## Clientes entre 40 e 50 anos são mais propensos a contratarem o seguro.
+
+## Clientes que possuem habilitação tem maior interesse no seguro.
+
+## Clientes com veículos que sofreram algum dano são mais propensos a contratarem o seguro.
+
+## Clientes com veículos com idade entre 1 e 2 anos tem maior interesse no seguro.
+
+## Clientes que já possuem seguro de automóvel não apresentam interesse.
+
 # 5. Modelos de Machine Learning
 Foram treinados 6 modelos de machine learning para previsão das vendas, com cross-validation:
 * Modelo Aleatório (Baseline para análise de performance)
@@ -126,7 +136,7 @@ Como restrição de negócio, k é igual a 20.000. A primeira vista, o valor de 
 Para determinar os resultados financeiros, as seguintes premissas foram definidas:
 * O número de clientes na base de dados será 95.278, onde 11678 clientes estão interessados no seguro.
 * Com base nos dados de treino, é esperado que 12,26% dos clientes estejam interessados (Modelo Aleatório).
-* O valor do prêmio anul é de ₹31.669 (rúpias), mediana dos valores na base de dados.
+* O valor do prêmio anual é de ₹31.669 (rúpias indianas), mediana dos valores na base de dados.
 
 |Modelo|Clientes interessados alcançados|Receita Anual|
 |------|--------------------------------|-------------|
@@ -151,4 +161,4 @@ Além disso, foram gerados X Insights interessantes que podem ser utilizados pel
 * Análisar a possibilidade de criação de features para melhorar o modelo.
 * Aplicar outros modelos de classificação que possam capturar melhor o fenômeno.
 * Aplicar a calibração do Modelo de Classificação para aumentar sua confiabilidade.
-* Otimizar o modelo utilizando o framework [Optuna](https://optuna.org/)
+* Otimizar o modelo utilizando o framework [Optuna](https://optuna.org/).
