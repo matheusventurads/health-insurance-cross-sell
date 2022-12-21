@@ -10,7 +10,9 @@ O time de produtos está analisando a possibilidade de oferecer aos assegurados 
 Cerca de 100 mil clientes que não responderam a pesquisa foram selecionados para participar de uma campanha, na qual receberão a oferta do novo produto de seguro de veículos feita pelo time de vendas. No entanto, o time de vendas tem capacidade de realizar apenas 20 mil ligações dentro do período de campanha.
 
 # 1. Questão de negócio
-Considerando o limite de ligações possíveis e com o intuito de priorizar os interessados e maximizar os lucros é necessário prever se os clientes que contrataram um seguro de saúde do último ano também estão interessados em seguros de automóveis fornecidos pela empresa. 
+Considerando o limite de ligações possíveis e com o intuito de priorizar os interessados e maximizar os lucros é necessário prever se os clientes que contrataram um seguro de saúde do último ano também estão interessados em seguros de automóveis fornecidos pela empresa.
+
+Qual o percentual de clientes interessados serão abrangidos pelos 20.000 ligações?
 
 ## 1.1. Entendendo os dados
 Para realizar a predição estão disponíveis dados demográficos, dos veículos e apólices de clientes com suas repostas de interesse ao novo produto de seguro.
@@ -168,7 +170,7 @@ _O modelo que realiza as predições foi hospedado na Cloud Render._
 
 # 8. Conclusão
 O objetivo de priorizar os clientes com maior propensão que devem ser contatados, foi alcançado. Permitindo maior retorno de clientes interessados assim como otimizando o trabalho do time de vendas.
-Além disso, foram gerados X Insights interessantes que podem ser utilizados pelo time de negócio.
+Além disso, foram gerados 5 Insights interessantes que podem ser utilizados pelo time de negócio.
 
 # 9. Próximos passos
 * Análisar a possibilidade de criação de features para melhorar o modelo.
